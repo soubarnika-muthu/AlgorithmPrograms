@@ -14,7 +14,8 @@ namespace AlgorithmPrograms
             Console.WriteLine("1.Permutation of string");
             Console.WriteLine("2.Binary search for word");
             Console.WriteLine("3.Insertion Sort");
-            Console.WriteLine("4.Exit");
+            Console.WriteLine("4.Bubble Sort");
+            Console.WriteLine("5.Exit");
             Console.Write("Enter your choice:");
             int choice = Convert.ToInt32(Console.ReadLine());
             switch (choice)
@@ -47,6 +48,12 @@ namespace AlgorithmPrograms
                     insertionSort.Display(textArray);
                     break;
                 case 4:
+                    int[] intArray = { 45,67,21,99,54,6 };
+                    BubbleSort bubbleSort = new BubbleSort();
+                    intArray = bubbleSort.Sort(intArray);
+                    bubbleSort.Display(intArray);
+                    break;
+                case 5:
                     break;
                 default:
                     Console.WriteLine("enter valid choice");
