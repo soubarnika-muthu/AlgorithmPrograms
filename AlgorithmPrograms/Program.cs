@@ -7,10 +7,14 @@ namespace AlgorithmPrograms
     {
         static void Main(string[] args)
         {
+            string filepath = @"C:\Users\hp\source\repos\AlgorithmPrograms\AlgorithmPrograms\TextFile.txt";
+            string text = File.ReadAllText(filepath);
+            string[] textArray = text.Split(" ");
             Console.WriteLine("Implementation of Algorithm Programs ");
             Console.WriteLine("1.Permutation of string");
             Console.WriteLine("2.Binary search for word");
-            Console.WriteLine("3.Exit");
+            Console.WriteLine("3.Insertion Sort");
+            Console.WriteLine("4.Exit");
             Console.Write("Enter your choice:");
             int choice = Convert.ToInt32(Console.ReadLine());
             switch (choice)
@@ -23,9 +27,7 @@ namespace AlgorithmPrograms
                     permutation.Permute(str, 0, n - 1);
                     break;
                 case 2:
-                    string filepath = @"C:\Users\hp\source\repos\AlgorithmPrograms\AlgorithmPrograms\TextFile.txt";
-                    string text = File.ReadAllText(filepath);
-                    string[] textArray = text.Split(" ");
+                   
                     BinarySearchWord Search = new BinarySearchWord(textArray);
                     Console.WriteLine("Enter the word to search:");
                     string searchElement = Console.ReadLine();
@@ -40,6 +42,11 @@ namespace AlgorithmPrograms
                     }
                     break;
                 case 3:
+                    InsertionSort insertionSort = new InsertionSort();
+                    insertionSort.Sort(textArray);
+                    insertionSort.Display(textArray);
+                    break;
+                case 4:
                     break;
                 default:
                     Console.WriteLine("enter valid choice");
