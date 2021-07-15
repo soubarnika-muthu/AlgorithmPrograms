@@ -16,7 +16,8 @@ namespace AlgorithmPrograms
             Console.WriteLine("3.Insertion Sort");
             Console.WriteLine("4.Bubble Sort");
             Console.WriteLine("5.Merge Sort");
-            Console.WriteLine("6.Exit");
+            Console.WriteLine("6.Anagram");
+            Console.WriteLine("7.Exit");
             Console.Write("Enter your choice:");
             int choice = Convert.ToInt32(Console.ReadLine());
             switch (choice)
@@ -63,6 +64,23 @@ namespace AlgorithmPrograms
 
                     break;
                 case 6:
+                    Anagram anagram = new Anagram();
+                    Console.WriteLine("Enter two strings :");
+                    string str1 = Console.ReadLine();
+                    string str2 = Console.ReadLine();
+                    
+                    int result = anagram.CheckAnagram(str1.ToLower(), str2.ToLower());
+                    if (result == 1)
+                    {
+                        Console.WriteLine("Two strings are anagram");
+                    }
+                    else
+                    {
+                        Console.WriteLine("the strings are not anagram");
+                    }
+                    break;
+
+                case 7:
                     break;
                 default:
                     Console.WriteLine("enter valid choice");
