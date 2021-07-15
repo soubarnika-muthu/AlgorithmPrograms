@@ -17,7 +17,8 @@ namespace AlgorithmPrograms
             Console.WriteLine("4.Bubble Sort");
             Console.WriteLine("5.Merge Sort");
             Console.WriteLine("6.Anagram");
-            Console.WriteLine("7.Exit");
+            Console.WriteLine("7.PrimeNumbers");
+            Console.WriteLine("8.Exit");
             Console.Write("Enter your choice:");
             int choice = Convert.ToInt32(Console.ReadLine());
             switch (choice)
@@ -79,8 +80,12 @@ namespace AlgorithmPrograms
                         Console.WriteLine("the strings are not anagram");
                     }
                     break;
-
                 case 7:
+                    PrimeNumbers primeNumbers = new PrimeNumbers();
+                    primeNumbers.PrintPrime();
+                    break;
+
+                case 8:
                     break;
                 default:
                     Console.WriteLine("enter valid choice");
