@@ -1,5 +1,5 @@
 ﻿using System;
-using System. IO;
+using System.IO;
 
 namespace AlgorithmPrograms
 {
@@ -18,7 +18,8 @@ namespace AlgorithmPrograms
             Console.WriteLine("5.Merge Sort");
             Console.WriteLine("6.Anagram");
             Console.WriteLine("7.PrimeNumbers");
-            Console.WriteLine("8.Exit");
+            Console.WriteLine("8.PrimeNumbersPalindrome and Anagram");
+            Console.WriteLine("9.Exit");
             Console.Write("Enter your choice:");
             int choice = Convert.ToInt32(Console.ReadLine());
             switch (choice)
@@ -34,7 +35,7 @@ namespace AlgorithmPrograms
                     BinarySearchWord<string> Search = new BinarySearchWord<string>(textArray);
                     Console.WriteLine("Enter the word to search:");
                     string searchElement = Console.ReadLine();
-                    int found = Search.binarysearch(textArray,searchElement);
+                    int found = Search.binarysearch(textArray, searchElement);
                     if (found == -1)
                     {
                         Console.WriteLine("element is not found");
@@ -50,16 +51,16 @@ namespace AlgorithmPrograms
                     insertionSort.Display(textArray);
                     break;
                 case 4:
-                    int[] intArray = { 45,67,21,99,54,6 };
+                    int[] intArray = { 45, 67, 21, 99, 54, 6 };
                     BubbleSort<int> bubbleSort = new BubbleSort<int>();
-                   intArray = bubbleSort.Sort(intArray);
+                    intArray = bubbleSort.Sort(intArray);
                     bubbleSort.Display(intArray);
                     break;
                 case 5:
                     int start = 0;
                     int end = textArray.Length;
                     MergeSort<string> mergeSort = new MergeSort<string>();
-                    mergeSort.mergeSort(textArray,start,end-1);
+                    mergeSort.mergeSort(textArray, start, end - 1);
                     mergeSort.Display(textArray);
 
                     break;
@@ -68,7 +69,7 @@ namespace AlgorithmPrograms
                     Console.WriteLine("Enter two strings :");
                     string str1 = Console.ReadLine();
                     string str2 = Console.ReadLine();
-                    
+
                     int result = anagram.CheckAnagram(str1.ToLower(), str2.ToLower());
                     if (result == 1)
                     {
@@ -82,9 +83,15 @@ namespace AlgorithmPrograms
                 case 7:
                     PrimeNumbers primeNumbers = new PrimeNumbers();
                     primeNumbers.PrintPrime();
+                    primeNumbers.display();
                     break;
-
                 case 8:
+                    PrimeNumbers primeNumbers1 = new PrimeNumbers();
+                    primeNumbers1.PrintPrime();
+                    primeNumbers1.PrintPalindrome();
+                    primeNumbers1.CheckAnagramPrime();
+                    break;
+                case 9:
                     break;
                 default:
                     Console.WriteLine("enter valid choice");
