@@ -19,7 +19,8 @@ namespace AlgorithmPrograms
             Console.WriteLine("6.Anagram");
             Console.WriteLine("7.PrimeNumbers");
             Console.WriteLine("8.PrimeNumbersPalindrome and Anagram");
-            Console.WriteLine("9.Exit");
+            Console.WriteLine("9.MagicNumber");
+            Console.WriteLine("10.Exit");
             Console.Write("Enter your choice:");
             int choice = Convert.ToInt32(Console.ReadLine());
             switch (choice)
@@ -92,6 +93,10 @@ namespace AlgorithmPrograms
                     primeNumbers1.CheckAnagramPrime();
                     break;
                 case 9:
+                    MagicNumber magicNumber = new MagicNumber();
+                    magicNumber.ThinkNumber();
+                    break;
+                case 10:
                     break;
                 default:
                     Console.WriteLine("enter valid choice");
