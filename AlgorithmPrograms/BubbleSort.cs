@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace AlgorithmPrograms
 {
-    class BubbleSort
+    class BubbleSort<T>where T:IComparable
     {
         //Bubble sort  compare the adjacent elements 
-        public int[] Sort(int[] array)
+        public T[] Sort(T[] array)
         {
             for (int i = 0; i < array.Length; i++)
             {
-                int temp;
+                T temp;
                 for (int j = i + 1; j < array.Length; j++)
                 {
                     //if the next element is less than current element then swap
@@ -26,9 +26,9 @@ namespace AlgorithmPrograms
                     }
                 }
             }
-            return array;
+         return array;
         }
-        public void Display(int[] array)
+        public void Display(T[] array)
         {
             for (int i = 0; i < array.Length; i++)
             {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AlgorithmPrograms
 {
-    class PrimeNumbers
+    class PrimeNumbers:Anagram
     {
         public void PrintPrime()
         {
@@ -25,6 +25,7 @@ namespace AlgorithmPrograms
                 }
                 if (flag == 0)
                     Console.WriteLine(i);
+
             }
         }
     }

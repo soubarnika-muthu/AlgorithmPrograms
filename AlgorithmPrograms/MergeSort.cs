@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace AlgorithmPrograms
 {
-    class MergeSort
+    class MergeSort<T> where T:IComparable
     {
 		// merge function take two intervals
 		// one from start to mid
 		// second from mid+1, to end
 		// and merge them in sorted order
 
-		public void merge(string[] Arr, int start, int mid, int end)
+		public void merge(T[] Arr, int start, int mid, int end)
 		{
 
 			// create a temp array
-			string[] temp = new string[end - start + 1];
+			T[] temp = new T[end - start + 1];
 
 			// crawlers for both intervals and for temp
 			int i = start, j = mid + 1, k = 0;
@@ -65,7 +65,7 @@ namespace AlgorithmPrograms
 	// Arr is an array of integer type
 	// start and end are the starting and ending index of current interval of Arr
 
-	public void mergeSort(string[] Arr, int start, int end)
+	public void mergeSort(T[] Arr, int start, int end)
 		{
 			if(Arr.Length==0||Arr.Length==1)
             {
@@ -81,7 +81,7 @@ namespace AlgorithmPrograms
 			}
 			
 		}
-		public void Display(string[] Arr)
+		public void Display(T[] Arr)
         {
 			for (int i = 0; i <Arr.Length ; i += 1)
 			{

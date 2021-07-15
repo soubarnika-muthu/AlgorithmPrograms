@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace AlgorithmPrograms
 {
-    class BinarySearchWord
+    class BinarySearchWord<T> where T:IComparable
     {
-        string[] array;
-        public BinarySearchWord(string[] array)
+        T[] array;
+        public BinarySearchWord(T[] array)
         {
             this.array = array;
             Array.Sort(this.array);
         }
-        public  int binarysearch(string[] array,string element)
+        public  int binarysearch(T[] array,T element)
         {
             int start = 0, end = array.Length - 1;
             while (start <= end)

@@ -31,8 +31,7 @@ namespace AlgorithmPrograms
                     permutation.Permute(str, 0, n - 1);
                     break;
                 case 2:
-                   
-                    BinarySearchWord Search = new BinarySearchWord(textArray);
+                    BinarySearchWord<string> Search = new BinarySearchWord<string>(textArray);
                     Console.WriteLine("Enter the word to search:");
                     string searchElement = Console.ReadLine();
                     int found = Search.binarysearch(textArray,searchElement);
@@ -46,20 +45,20 @@ namespace AlgorithmPrograms
                     }
                     break;
                 case 3:
-                    InsertionSort insertionSort = new InsertionSort();
+                    InsertionSort<string> insertionSort = new InsertionSort<string>();
                     insertionSort.Sort(textArray);
                     insertionSort.Display(textArray);
                     break;
                 case 4:
                     int[] intArray = { 45,67,21,99,54,6 };
-                    BubbleSort bubbleSort = new BubbleSort();
-                    intArray = bubbleSort.Sort(intArray);
+                    BubbleSort<int> bubbleSort = new BubbleSort<int>();
+                   intArray = bubbleSort.Sort(intArray);
                     bubbleSort.Display(intArray);
                     break;
                 case 5:
                     int start = 0;
                     int end = textArray.Length;
-                    MergeSort mergeSort = new MergeSort();
+                    MergeSort<string> mergeSort = new MergeSort<string>();
                     mergeSort.mergeSort(textArray,start,end-1);
                     mergeSort.Display(textArray);
 
