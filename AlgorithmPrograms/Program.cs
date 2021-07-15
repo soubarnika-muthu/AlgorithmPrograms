@@ -15,7 +15,8 @@ namespace AlgorithmPrograms
             Console.WriteLine("2.Binary search for word");
             Console.WriteLine("3.Insertion Sort");
             Console.WriteLine("4.Bubble Sort");
-            Console.WriteLine("5.Exit");
+            Console.WriteLine("5.Merge Sort");
+            Console.WriteLine("6.Exit");
             Console.Write("Enter your choice:");
             int choice = Convert.ToInt32(Console.ReadLine());
             switch (choice)
@@ -54,6 +55,14 @@ namespace AlgorithmPrograms
                     bubbleSort.Display(intArray);
                     break;
                 case 5:
+                    int start = 0;
+                    int end = textArray.Length;
+                    MergeSort mergeSort = new MergeSort();
+                    mergeSort.mergeSort(textArray,start,end-1);
+                    mergeSort.Display(textArray);
+
+                    break;
+                case 6:
                     break;
                 default:
                     Console.WriteLine("enter valid choice");
